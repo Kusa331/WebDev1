@@ -1,0 +1,367 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;  /* Dark Gray */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: #2c3e50;  /* Dark Gray */
+    color: #ecf0f1;  /* Light Gray */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #ecf0f1;  /* Light Gray */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;  /* Gold */
+}
+
+/* Side Navbar Styles */
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #34495e;  /* Muted Dark Blue */
+    padding-top: 50px;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.side-navbar.open {
+    transform: translateX(0);
+}
+
+.side-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-navbar ul li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.side-navbar ul li a {
+    color: #ecf0f1;  /* Light Gray */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.side-navbar ul li a:hover {
+    background: #2980b9;  /* Blue */
+}
+
+/* Toggle Button Styles */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    color: grey;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links on small screens */
+    }
+
+    .side-navbar {
+        display: block; /* Show side navbar on small screens */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #34495e, #2c3e50);  /* Dark Blue to Dark Gray gradient */
+    color: #ecf0f1;  /* Light Gray */
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-content span {
+    color: #f39c12;  /* Gold */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f39c12;  /* Gold */
+    color: #2c3e50;  /* Dark Gray */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #e67e22;  /* Darker Gold */
+}
+
+/* Image Styling */
+.hero-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #ecf0f1;  /* Light Gray */
+}
+
+section:nth-of-type(even) {
+    background: #bdc3c7;  /* Lighter Gray */
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill 
+ {
+    width: 120px;
+    text-align: center;
+}
+
+.skill-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #34495e;  /* Muted Dark Blue */
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2980b9;  /* Blue */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #3498db;  /* Lighter Blue */
+}
+
+/* Project Image Styling */
+.project img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    margin-bottom: 15px;
+}
+
+/* Certificates Section */
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.certificate {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.certificate:hover {
+    transform: translateY(-10px);
+}
+
+.certificate-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.certificate p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #34495e;  /* Muted Dark Blue */
+    margin-bottom: 10px;
+}
+
+.certificate-link {
+    display: inline-block;
+    color: #f39c12;  /* Gold */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.certificate-link:hover {
+    color: #e67e22;  /* Darker Gold */
+}
+
+/* Contact Section */
+#contact {
+    background: #ecf0f1;  /* Light Gray */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #f39c12;  /* Gold */
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background: #f39c12;  /* Gold */
+    color: #2c3e50;  /* Dark Gray */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #e67e22;  /* Darker Gold */
+}
+
+/* Footer Section */
+footer {
+    background: #2c3e 50;  /* Dark Gray */
+    color: #ecf0f1;  /* Light Gray */
+    padding: 20px 0;
+    text-align: center;
+}
